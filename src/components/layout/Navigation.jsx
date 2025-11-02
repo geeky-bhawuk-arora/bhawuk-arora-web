@@ -1,4 +1,3 @@
-// src/components/layout/Navigation.jsx
 import React, { useState } from 'react';
 import { Menu, X, Sparkles } from 'lucide-react';
 import { personalInfo } from '../../data/personalInfo';
@@ -13,9 +12,9 @@ const Navigation = ({ activeSection, scrollToSection }) => {
     setIsMenuOpen(false);
   };
 
-  const handleAdminClick = () => {
-    window.location.href = '/admin';
-  };
+  // const handleAdminClick = () => {
+  //   window.location.href = '/admin';
+  // };
 
   return (
     <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 z-50">
@@ -47,13 +46,13 @@ const Navigation = ({ activeSection, scrollToSection }) => {
             ))}
             
             {/* Admin Link */}
-            <button
+            {/* <button
               onClick={handleAdminClick}
               className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-lg transition-all font-medium"
             >
               <Sparkles size={16} />
               <span>Admin</span>
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -79,13 +78,13 @@ const Navigation = ({ activeSection, scrollToSection }) => {
                 {item}
               </button>
             ))}
-            <button
+            {/* <button
               onClick={handleAdminClick}
               className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-lg transition-all font-medium"
             >
               <Sparkles size={16} />
               <span>Admin Panel</span>
-            </button>
+            </button> */}
           </div>
         )}
       </div>

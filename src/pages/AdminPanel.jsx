@@ -6,7 +6,7 @@ import AdminHeader from '../components/admin/AdminHeader';
 import DashboardView from '../components/admin/DashboardView';
 import BookmarksView from '../components/admin/BookmarksView';
 import AddBookmarkModal from '../components/admin/AddBookmarkModal';
-import bookmarkApi from '../services/bookmarkApi';
+import BookmarkAPI from '../services/bookmarkApi';
 import { useAdminStore } from '../hooks/useAdminStore';
 
 const AdminPanel = () => {

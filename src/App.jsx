@@ -22,7 +22,7 @@ import './styles/global.css';
 function App() {
   const { scrollY, activeSection } = useScrollPosition();
 
-  const isAdminRoute = window.location.pathname === '/admin';
+  // const isAdminRoute = window.location.pathname === '/admin';
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -32,9 +32,9 @@ function App() {
   };
 
   // Admin Panel Route
-  if (isAdminRoute) {
-    return <AdminPanel />;
-  }
+  // if (isAdminRoute) {
+  //   return <AdminPanel />;
+  // }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-x-hidden">
