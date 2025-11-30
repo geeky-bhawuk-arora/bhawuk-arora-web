@@ -4,7 +4,7 @@ import { Code, Database, Zap, Globe, Palette, Smartphone } from 'lucide-react';
 import AnimatedSection from '../ui/AnimatedSection';
 import SkillBar from '../ui/SkillBar';
 import SectionHeader from '../common/SectionHeader';
-import { technicalSkills, technologies } from '../../data/skills';
+import { technicalSkills, technologies } from '../../data/skill';
 
 const SkillsSection = () => {
   const techIcons = {

@@ -11,7 +11,7 @@ import BackgroundElements from './components/layout/BackgroundElements';
 import HeroSection from './components/sections/HeroSection';
 // import StatsSection from './components/sections/StatsSection';
 // import AboutSection from './components/sections/AboutSection';
-// import SkillsSection from './components/sections/SkillsSection';
+import SkillsSection from './components/sections/SkillsSection';
 import ExperienceSection from './components/sections/ExperienceSection';
 // import ProjectsSection from './components/sections/ProjectsSection';
 import ContactSection from './components/sections/ContactSection';
@@ -53,7 +53,7 @@ function App() {
         <HeroSection scrollToSection={scrollToSection} />
         {/* <StatsSection /> */}
         {/* <AboutSection /> */}
-         {/* <SkillsSection /> */}
+         <SkillsSection />
         <ExperienceSection />
         {/* <ProjectsSection />  */}
         <ContactSection />
