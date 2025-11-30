@@ -28,38 +28,66 @@ export const workExperience = [
   }
 ];
 
-export const education = {
-  degree: "Bachelor of Technology - BTech",
-  field: "Artificial Intelligence and Data Science",
-  institution: "Poornima College of Engineering",
-  graduationDate: "November 2022",
-  location: "Jaipur, Rajasthan, India",
-  description: "Comprehensive education in AI, machine learning, data science, deep learning, and software development. Completed multiple projects in neural networks, computer vision, and data analytics."
-};
+export const education = [
+  {
+    degree: "Bachelor of Technology - BTech",
+    field: "Artificial Intelligence and Data Science",
+    institution: "Poornima College of Engineering",
+    period: "November 2022 - May 2026 (Expected)",
+    location: "Jaipur, Rajasthan, India",
+    grade: "CGPA: 9.08",
+    description: "Comprehensive education in AI, machine learning, data science, deep learning, and software development.",
+    icon: "college"
+  },
+  {
+    degree: "Higher Secondary Certificate (HSC)",
+    field: "Physics, Chemistry, Mathematics (PCM)",
+    institution: "Lord Buddha Public School Kota",
+    period: "April 2020 - April 2022",
+    location: "Kota, Rajasthan, India",
+    grade: "92.22%",
+    description: "CBSE Board - Science stream with focus on PCM.",
+    icon: "school"
+  },
+  {
+    degree: "Secondary School Certificate (SSC)",
+    field: "CBSE",
+    institution: "St Paul's Sr. Sec. School",
+    period: "April 2009 - March 2020",
+    location: "Vallabh Nagar, Kota, Rajasthan, India",
+    grade: "92.6%",
+    description: "CBSE Board - Completed secondary education with distinction.",
+    icon: "school"
+  }
+];
 
 export const certifications = [
   {
     name: "Microsoft Certified: Azure Developer Associate",
     issuer: "Microsoft",
     icon: "azure",
-    color: "blue"
+    color: "blue",
+    link: "" // Add your certification link here later
   },
   {
     name: "Microsoft Certified: Azure AI Engineer Associate",
     issuer: "Microsoft",
     icon: "azure",
-    color: "blue"
+    color: "blue",
+    link: "" // Add your certification link here later
   },
   {
     name: "Oracle Cloud Infrastructure Certified DevOps Professional",
     issuer: "Oracle",
     icon: "oracle",
-    color: "red"
+    color: "red",
+    link: "" // Add your certification link here later
   },
   {
     name: "Oracle Cloud Infrastructure Certified Architect Associate",
     issuer: "Oracle",
     icon: "oracle",
-    color: "red"
+    color: "red",
+    link: "" // Add your certification link here later
   }
 ];

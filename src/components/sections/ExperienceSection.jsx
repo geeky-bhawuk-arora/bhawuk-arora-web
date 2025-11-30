@@ -100,35 +100,66 @@ const ExperienceSection = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {/* Education */}
               <div className="bg-slate-800/40 backdrop-blur-sm p-6 rounded-2xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300">
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <GraduationCap className="text-white" size={24} />
                   </div>
-                  <div className="flex-1">
-                    <h4 className="text-lg font-bold text-blue-400 mb-1">{education.degree}</h4>
-                    <p className="text-sm font-medium text-gray-300 mb-1">{education.field}</p>
-                    <p className="text-sm text-gray-400 mb-2">{education.institution}</p>
-                    <p className="text-xs text-gray-500">Graduated: {education.graduationDate}</p>
-                  </div>
+                  <h4 className="text-lg font-bold text-blue-400 pt-2">Education</h4>
+                </div>
+                
+                <div className="space-y-4">
+                  {education.map((edu, index) => (
+                    <div 
+                      key={index} 
+                      className="p-4 bg-slate-700/30 rounded-lg hover:bg-slate-700/50 transition-all border border-slate-600/30 hover:border-blue-400/30"
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <GraduationCap size={18} className="text-white" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h5 className="text-sm font-bold text-gray-200 mb-1">{edu.degree}</h5>
+                          <p className="text-xs font-medium text-blue-300 mb-1">{edu.field}</p>
+                          <p className="text-xs text-gray-400 mb-1">{edu.institution}</p>
+                          <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
+                            <span>{edu.period}</span>
+                            <span>•</span>
+                            <span className="text-green-400 font-semibold">{edu.grade}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
 
               {/* Certifications */}
               <div className="bg-slate-800/40 backdrop-blur-sm p-6 rounded-2xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300">
-                <div className="flex items-start gap-4 mb-4">
+                <div className="flex items-start gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Award className="text-white" size={24} />
                   </div>
                   <h4 className="text-lg font-bold text-purple-400 pt-2">Professional Certifications</h4>
                 </div>
-                <ul className="space-y-2.5 ml-16">
+                
+                <div className="space-y-4">
                   {certifications.map((cert, index) => (
-                    <li key={index} className="flex items-start gap-2 text-sm text-gray-300">
-                      <span className={`text-${cert.color}-400 mt-0.5 flex-shrink-0`}>✓</span>
-                      <span>{cert.name}</span>
-                    </li>
+                    <div 
+                      key={index} 
+                      className="flex items-start gap-3 p-3 bg-slate-700/30 rounded-lg hover:bg-slate-700/50 transition-all border border-slate-600/30 hover:border-purple-400/30"
+                    >
+                      <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Award size={18} className="text-white" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-semibold text-gray-200 leading-snug">
+                          {cert.name}
+                        </p>
+                        <p className="text-xs text-gray-400 mt-1">{cert.issuer}</p>
+                      </div>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
           </div>
