@@ -1,18 +1,20 @@
-// src/components/layout/Navigation.jsx
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sparkles } from 'lucide-react';
 import { personalInfo } from '../../data/personalInfo';
 
 const Navigation = ({ activeSection, scrollToSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // const navItems = ['home', 'about', 'skills', 'experience', 'projects', 'contact'];
   const navItems = ['home', 'contact'];
 
   const handleNavClick = (section) => {
     scrollToSection(section);
     setIsMenuOpen(false);
   };
+
+  // const handleAdminClick = () => {
+  //   window.location.href = '/admin';
+  // };
 
   return (
     <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 z-50">
@@ -27,7 +29,7 @@ const Navigation = ({ activeSection, scrollToSection }) => {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item}
@@ -42,6 +44,15 @@ const Navigation = ({ activeSection, scrollToSection }) => {
                 )}
               </button>
             ))}
+            
+            {/* Admin Link */}
+            {/* <button
+              onClick={handleAdminClick}
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-lg transition-all font-medium"
+            >
+              <Sparkles size={16} />
+              <span>Admin</span>
+            </button> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -67,6 +78,13 @@ const Navigation = ({ activeSection, scrollToSection }) => {
                 {item}
               </button>
             ))}
+            {/* <button
+              onClick={handleAdminClick}
+              className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-lg transition-all font-medium"
+            >
+              <Sparkles size={16} />
+              <span>Admin Panel</span>
+            </button> */}
           </div>
         )}
       </div>
@@ -74,4 +92,4 @@ const Navigation = ({ activeSection, scrollToSection }) => {
   );
 };
 
-export default Navigation;  
+export default Navigation;

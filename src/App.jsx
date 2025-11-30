@@ -12,7 +12,7 @@ import HeroSection from './components/sections/HeroSection';
 // import StatsSection from './components/sections/StatsSection';
 // import AboutSection from './components/sections/AboutSection';
 // import SkillsSection from './components/sections/SkillsSection';
-// import ExperienceSection from './components/sections/ExperienceSection';
+import ExperienceSection from './components/sections/ExperienceSection';
 // import ProjectsSection from './components/sections/ProjectsSection';
 import ContactSection from './components/sections/ContactSection';
 
@@ -20,7 +20,10 @@ import ContactSection from './components/sections/ContactSection';
 import './styles/global.css';
 
 function App() {
-  const { scrollY, activeSection } = useScrollPosition();
+  // const { scrollY, activeSection } = useScrollPosition();
+  const { activeSection } = useScrollPosition();
+
+  // const isAdminRoute = window.location.pathname === '/admin';
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -28,6 +31,11 @@ function App() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  // Admin Panel Route
+  // if (isAdminRoute) {
+  //   return <AdminPanel />;
+  // }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-x-hidden">
@@ -45,9 +53,9 @@ function App() {
         <HeroSection scrollToSection={scrollToSection} />
         {/* <StatsSection /> */}
         {/* <AboutSection /> */}
-        {/* <SkillsSection />
+         {/* <SkillsSection /> */}
         <ExperienceSection />
-        <ProjectsSection />  */}
+        {/* <ProjectsSection />  */}
         <ContactSection />
       </main>
       
