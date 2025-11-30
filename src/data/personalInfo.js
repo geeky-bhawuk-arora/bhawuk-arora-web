@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Bhawuk Arora",
-  title: "Aspiring Big Data Engineer",
+  title: "Junior Associate DevOps and App Modernisation at Celebal Technologies",
   location: "India",
   bio: "On paper, I'm a student of AI & Data Science. In reality, I'm a professional bug creator and a full-time enthusiast of things that fly (and occasionally crash).",
   email: "bhawukarora042@gmail.com",

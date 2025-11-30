@@ -4,7 +4,7 @@ import { Code, Database, Zap, Globe, Palette, Smartphone } from 'lucide-react';
 import AnimatedSection from '../ui/AnimatedSection';
 import SkillBar from '../ui/SkillBar';
 import SectionHeader from '../common/SectionHeader';
-import { technicalSkills, technologies } from '../../data/skills';
+import { technicalSkills, technologies } from '../../data/skill';
 
 const SkillsSection = () => {
   const techIcons = {
@@ -91,7 +91,7 @@ const SkillsSection = () => {
                     { category: 'Mobile Development', skills: ['React Native', 'Flutter', 'Ionic'] },
                     { category: 'DevOps & Tools', skills: ['Docker', 'Git', 'CI/CD', 'Linux'] },
                     { category: 'Design & UX', skills: ['Figma', 'Adobe XD', 'Responsive Design'] }
-                  ].map((category, index) => (
+                  ].map((category) => (
                     <div key={category.category} className="border-b border-slate-700/50 pb-4 last:border-b-0">
                       <div className="font-medium text-gray-300 mb-2">{category.category}</div>
                       <div className="flex flex-wrap gap-2">
