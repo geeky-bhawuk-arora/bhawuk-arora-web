@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
+import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
 const SkillBar = ({ skill, percentage, delay = 0 }) => {
   const [ref, isIntersecting] = useIntersectionObserver({ threshold: 0.5 });
