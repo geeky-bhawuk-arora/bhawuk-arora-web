@@ -1,8 +1,8 @@
 export const personalInfo = {
   name: "Bhawuk Arora",
-  title: "Junior Associate DevOps and App Modernisation at Celebal Technologies",
+  title: "Corporate Kid in Tech ;-)",
   location: "India",
-  bio: "On paper, I'm a student of AI & Data Science. In reality, I'm a professional bug creator and a full-time enthusiast of things that fly (and occasionally crash).",
+  bio: "On paper, I'm a student of AI & Data Science. In reality, I'm a professional bug creator and a full-time enthusiast of things that fly (and occasionally crash) :)",
   email: "bhawukarora042@gmail.com",
   phone: "+91 97821760005",
   linkedin: "https://linkedin.com/in/bhawuk-arora",

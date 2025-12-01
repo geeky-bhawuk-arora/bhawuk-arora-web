@@ -40,7 +40,7 @@ export const education = [
     icon: "college"
   },
   {
-    degree: "Higher Secondary Certificate (HSC)",
+    degree: "Higher Secondary Certificate",
     field: "Physics, Chemistry, Mathematics (PCM)",
     institution: "Lord Buddha Public School Kota",
     period: "April 2020 - April 2022",
@@ -50,7 +50,7 @@ export const education = [
     icon: "school"
   },
   {
-    degree: "Secondary School Certificate (SSC)",
+    degree: "Secondary School Certificate",
     field: "CBSE",
     institution: "St Paul's Sr. Sec. School",
     period: "April 2009 - March 2020",
