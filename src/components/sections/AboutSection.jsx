@@ -63,7 +63,7 @@ const AboutSection = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         {/* HEADER */}
         <AnimatedSection>
           <SectionHeader 
@@ -85,7 +85,7 @@ const AboutSection = () => {
         {/* MAIN BIO */}
         <AnimatedSection delay={200}>
           <div className="mt-16 space-y-6 text-center max-w-4xl mx-auto">
-            <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed">
               I work across{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 font-bold">
                 DevOps, Data Engineering, and Cloud Automation
@@ -93,12 +93,11 @@ const AboutSection = () => {
               {' '} building systems that behave better than most software I meet.
             </p>
 
-
-            <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
-              I automate repetitive tasks, decode messy logs, and solve problems I definitely didn’t cause (probably).
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed">
+              I automate repetitive tasks, decode messy logs, and solve problems I definitely didn't cause (probably).
             </p>
 
-            <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed">
               Early in my career but learning fast, iterating faster, and breaking fewer things with surprising consistency.
             </p>
           </div>
@@ -106,43 +105,43 @@ const AboutSection = () => {
 
         {/* Fun Facts Pills */}
         <AnimatedSection delay={250}>
-          <div className="mt-12 flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+          <div className="mt-12 flex flex-wrap justify-center gap-3 sm:gap-4 max-w-4xl mx-auto">
             {funFacts.map((fact, i) => (
               <div 
                 key={i}
-                className="flex items-center gap-2 px-6 py-3 bg-slate-800/50 border border-slate-700/50 rounded-full hover:border-blue-400/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                className="flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-slate-800/50 border border-slate-700/50 rounded-full hover:border-blue-400/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
               >
-                <fact.icon size={20} className="text-blue-400" />
-                <span className="text-gray-300 text-sm">{fact.text}</span>
+                <fact.icon size={18} className="text-blue-400 flex-shrink-0" />
+                <span className="text-gray-300 text-xs sm:text-sm">{fact.text}</span>
               </div>
             ))}
           </div>
         </AnimatedSection>
 
-        {/* QUICK STATS - INTEGRATED HERE */}
+        {/* QUICK STATS - Horizontal on all screens, better mobile sizing */}
         <AnimatedSection delay={300}>
-          <div className="grid grid-cols-3 gap-6 mt-16 max-w-3xl mx-auto">
+          <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 mt-16 max-w-3xl mx-auto">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="group relative bg-slate-800/40 backdrop-blur-sm p-6 rounded-2xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105"
+                className="group relative bg-slate-800/40 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105"
               >
                 {/* Background gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-2xl`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-xl sm:rounded-2xl`}></div>
                 
                 {/* Icon */}
-                <div className="relative flex justify-center mb-3">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${stat.gradient} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <stat.icon size={20} className="text-white" />
+                <div className="relative flex justify-center mb-2 sm:mb-3">
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${stat.gradient} rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <stat.icon className="text-white w-5 h-5 sm:w-5 sm:h-5" />
                   </div>
                 </div>
 
                 {/* Count */}
                 <div className="relative text-center">
-                  <div className={`text-3xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`text-2xl sm:text-3xl md:text-3xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300`}>
                     {stat.count}
                   </div>
-                  <div className="text-gray-400 font-medium text-sm">{stat.label}</div>
+                  <div className="text-gray-400 font-medium text-xs sm:text-sm leading-tight">{stat.label}</div>
                 </div>
 
                 {/* Decorative line */}
@@ -154,27 +153,27 @@ const AboutSection = () => {
 
         {/* WHAT I DO */}
         <AnimatedSection delay={400}>
-          <h3 className="text-3xl md:text-4xl font-bold text-center mt-24 mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mt-24 mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             What I Do
           </h3>
         </AnimatedSection>
 
-        {/* Service Cards */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {/* Service Cards - Vertical on mobile, 3 columns on desktop */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {services.map((service, i) => (
             <AnimatedSection key={i} delay={450 + i * 100}>
-              <div className="group relative bg-slate-800/40 backdrop-blur-sm p-8 rounded-2xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 h-full">
+              <div className="group relative bg-slate-800/40 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10">
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-2xl`}></div>
                 
                 {/* Icon */}
-                <div className={`relative w-16 h-16 mb-6 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon size={28} className="text-white" />
+                <div className={`relative w-14 h-14 sm:w-16 sm:h-16 mb-6 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="text-white w-6 h-6 sm:w-7 sm:h-7" />
                 </div>
 
                 {/* Content */}
                 <div className="relative">
-                  <h4 className="text-xl font-bold text-gray-100 mb-3 group-hover:text-blue-400 transition-colors">
+                  <h4 className="text-lg sm:text-xl font-bold text-gray-100 mb-3 group-hover:text-blue-400 transition-colors">
                     {service.title}
                   </h4>
                   <p className="text-gray-400 leading-relaxed text-sm">
