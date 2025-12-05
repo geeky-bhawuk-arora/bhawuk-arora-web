@@ -1,4 +1,3 @@
-// src/components/sections/ContactSection.jsx - MODERN VERSION
 import React, { useState } from 'react';
 import { Mail, Linkedin, Github, Send, CheckCircle, MapPin } from 'lucide-react';
 import AnimatedSection from '../ui/AnimatedSection';
@@ -26,12 +25,12 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
-      
+
       setTimeout(() => {
         setIsSubmitted(false);
       }, 3000);
@@ -69,13 +68,32 @@ const ContactSection = () => {
     <section id="contact" className="py-32 bg-slate-900/30 relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <AnimatedSection>
-          <SectionHeader 
-            title="Let's Connect" 
+          <SectionHeader
+            title="Let's Connect"
             subtitle="Got a wild idea? A bug that's driving you crazy? Or do you just want to debate whether a hot dog is a sandwich? ;)
 Hit me up! Let's create something cool (or at least have a good laugh)."
           />
         </AnimatedSection>
-        
+
+        <AnimatedSection delay={200}>
+          <div className="text-center mb-12">
+            <h3
+              className="
+                        text-3xl font-bold 
+                        bg-gradient-to-r from-blue-400 to-purple-400 
+                        bg-clip-text text-transparent
+                      "
+            >
+              Professional Journey
+            </h3>
+
+            {/* Humour Subtitle */}
+            <p className="text-sm text-gray-400 mt-2 italic">
+              Where I learned the theory… and Google taught me the rest.
+            </p>
+          </div>
+        </AnimatedSection>
+
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 mt-20">
           {/* Contact Information - 2 columns */}
           <div className="lg:col-span-2">
@@ -85,17 +103,17 @@ Hit me up! Let's create something cool (or at least have a good laugh)."
                   <h3 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text mb-10">
                     Get In Touch
                   </h3>
-                  
+
                   <div className="space-y-6">
                     {contactMethods.map((contact, index) => (
-                      <div 
-                        key={index} 
+                      <div
+                        key={index}
                         className="group relative p-6 bg-gradient-to-br from-slate-800/50 to-slate-800/30 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 cursor-pointer overflow-hidden"
                         onClick={contact.action}
                       >
                         {/* Gradient overlay on hover */}
                         <div className={`absolute inset-0 bg-gradient-to-br ${contact.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-                        
+
                         <div className="relative flex items-start gap-5">
                           <div className={`p-4 bg-gradient-to-br ${contact.gradient} rounded-xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0 shadow-lg`}>
                             <contact.icon size={26} className="text-white" />
@@ -112,7 +130,7 @@ Hit me up! Let's create something cool (or at least have a good laugh)."
                     ))}
                   </div>
                 </div>
-                
+
                 {/* Location & Availability */}
                 <div className="p-8 bg-gradient-to-br from-slate-800/50 to-slate-800/30 rounded-2xl border border-slate-700/50">
                   <h4 className="text-xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text mb-6 flex items-center gap-3">
@@ -157,7 +175,7 @@ Hit me up! Let's create something cool (or at least have a good laugh)."
               </div>
             </AnimatedSection>
           </div>
-          
+
           {/* Contact Form - 3 columns */}
           {/* <div className="lg:col-span-3">
             <AnimatedSection delay={400}>

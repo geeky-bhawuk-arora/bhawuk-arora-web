@@ -15,20 +15,27 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="py-20 bg-slate-900/30">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimatedSection delay={200}>
+          <div className="text-center mb-12">
+            <h3
+              className="
+                text-3xl font-bold 
+                bg-gradient-to-r from-blue-400 to-purple-400 
+                bg-clip-text text-transparent
+              "
+            >
+              Professional Journey
+            </h3>
 
-        {/* ============================ */}
-        {/* EXPERIENCE HEADER */}
-        {/* ============================ */}
-        <AnimatedSection>
-          <SectionHeader
-            title="Professional Journey"
-            subtitle="A compressed view of everything I can do (and do without breaking production… mostly)"
-          />
+            {/* Humour Subtitle */}
+            <p className="text-sm text-gray-400 mt-2 italic">
+              Where I learned the theory… and Google taught me the rest.
+            </p>
+          </div>
         </AnimatedSection>
 
-        {/* ============================ */}
-        {/* EXPERIENCE TIMELINE */}
-        {/* ============================ */}
+
+        {/* professional experience */}
         <div className="mt-16 space-y-14 relative border-l border-slate-700/40">
 
           {workExperience.map((job, index) => (
@@ -36,28 +43,22 @@ const ExperienceSection = () => {
               <div className="relative pl-12">
 
                 {/* Timeline Dot */}
-                <div className="
-                  absolute -left-[9px] top-3 w-5 h-5 rounded-full 
-                  bg-gradient-to-br from-blue-500 to-purple-600 
-                  shadow-lg shadow-blue-600/30 border border-white/10
-                " />
+                <div
+                  className="
+            absolute -left-[9px] top-3 w-5 h-5 rounded-full 
+            bg-gradient-to-br from-blue-500 to-purple-600 
+            shadow-lg shadow-blue-600/30 border border-white/10
+          "
+                />
 
                 {/* Experience Card */}
-                <div className="
-                  relative bg-slate-800/40 backdrop-blur-xl p-6 rounded-2xl
-                  border border-slate-700/50 transition-all duration-300
-                  hover:border-blue-500/50 hover:shadow-blue-500/10
-                ">
-                  
-                  {/* Duration Badge */}
-                  <div className="
-                    absolute top-4 right-4 w-16 h-16 rounded-full
-                    bg-gradient-to-br from-blue-700/20 to-purple-700/20 
-                    border border-blue-400/30
-                    text-[10px] text-white flex items-center justify-center
-                  ">
-                    {job.duration}
-                  </div>
+                <div
+                  className="
+            relative bg-slate-800/40 backdrop-blur-xl p-6 rounded-2xl
+            border border-slate-700/50 transition-all duration-300
+            hover:border-blue-500/50 hover:shadow-blue-500/10
+          "
+                >
 
                   {/* Header */}
                   <h3 className="text-xl font-semibold text-white">{job.title}</h3>
@@ -79,11 +80,11 @@ const ExperienceSection = () => {
                       <span
                         key={i}
                         className="
-                          px-3 py-1.5 rounded-lg text-xs 
-                          bg-slate-700/40 border border-slate-600/50
-                          hover:border-blue-400/50 hover:bg-slate-700/60 
-                          text-gray-300 transition
-                        "
+                  px-3 py-1.5 rounded-lg text-xs 
+                  bg-slate-700/40 border border-slate-600/50
+                  hover:border-blue-400/50 hover:bg-slate-700/60 
+                  text-gray-300 transition
+                "
                       >
                         {h}
                       </span>
@@ -96,6 +97,7 @@ const ExperienceSection = () => {
           ))}
 
         </div>
+
 
 
         {/* ============================ */}
