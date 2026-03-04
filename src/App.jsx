@@ -13,7 +13,8 @@ import HeroSection from './components/sections/HeroSection';
 import AboutSection from './components/sections/AboutSection';
 import SkillsSection from './components/sections/SkillsSection';
 import ExperienceSection from './components/sections/ExperienceSection';
-// import ProjectsSection from './components/sections/ProjectsSection';
+import ProjectsSection from './components/sections/ProjectSection';
+import BlogSection from './components/sections/BlogSection';
 import ContactSection from './components/sections/ContactSection';
 
 // Styles
@@ -41,13 +42,13 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-x-hidden">
       {/* Background Elements */}
       <BackgroundElements />
-      
+
       {/* Navigation */}
-      <Navigation 
-        activeSection={activeSection} 
+      <Navigation
+        activeSection={activeSection}
         scrollToSection={scrollToSection}
       />
-      
+
       {/* Main Content */}
       <main className="relative z-10">
         <HeroSection scrollToSection={scrollToSection} />
@@ -55,10 +56,11 @@ function App() {
         <AboutSection />
         <SkillsSection />
         <ExperienceSection />
-        {/* <ProjectsSection />  */}
+        <ProjectsSection />
+        <BlogSection />
         <ContactSection />
       </main>
-      
+
       {/* Footer */}
       <Footer scrollToSection={scrollToSection} />
     </div>

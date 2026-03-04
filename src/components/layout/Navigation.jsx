@@ -6,7 +6,7 @@ import { personalInfo } from '../../data/personalInfo';
 const Navigation = ({ activeSection, scrollToSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = ['home', 'experience', 'contact'];
+  const navItems = ['home', 'experience', 'projects', 'blog', 'contact'];
 
   const handleNavClick = (section) => {
     scrollToSection(section);
