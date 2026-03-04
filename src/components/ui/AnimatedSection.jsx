@@ -1,21 +1,24 @@
-import React from 'react';
-import { useIntersectionObserver } from '../../hooks/useIntersectionCounter';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const AnimatedSection = ({ children, className = "", delay = 0 }) => {
-  const [ref, isIntersecting] = useIntersectionObserver();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-10%" });
 
   return (
-    <div
+    <motion.div
       ref={ref}
-      className={`transform transition-all duration-700 ease-out ${
-        isIntersecting 
-          ? 'translate-y-0 opacity-100' 
-          : 'translate-y-10 opacity-0'
-      } ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
+      animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : { opacity: 0, y: 40, filter: 'blur(10px)' }}
+      transition={{
+        duration: 0.8,
+        ease: [0.16, 1, 0.3, 1],
+        delay: delay > 0 ? delay / 1000 : 0
+      }}
+      className={className}
     >
       {children}
-    </div>
+    </motion.div>
   );
 };
 
