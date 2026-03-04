@@ -46,9 +46,9 @@ const ExperienceSection = () => {
                 <div className="
                   relative bg-slate-800/40 backdrop-blur-xl p-6 rounded-2xl
                   border border-slate-700/50 transition-all duration-300
-                  hover:border-blue-500/50 hover:shadow-blue-500/10
+                  hover:border-blue-500/50 hover:shadow-blue-500/10 hover:-translate-y-1 hover:scale-[1.02]
                 ">
-                  
+
                   {/* Duration Badge */}
                   <div className="
                     absolute top-4 right-4 w-16 h-16 rounded-full
@@ -140,7 +140,7 @@ const ExperienceSection = () => {
                 <div className="
                   bg-slate-800/40 backdrop-blur-xl p-6 rounded-2xl
                   border border-slate-700/50 transition-all duration-300
-                  hover:border-blue-500/50 hover:shadow-blue-500/10
+                  hover:border-blue-500/50 hover:shadow-blue-500/10 hover:-translate-y-1 hover:scale-[1.02]
                 ">
 
                   <div className="flex items-start gap-4 mb-3">
@@ -205,7 +205,7 @@ const ExperienceSection = () => {
                 className="
                   bg-slate-800/40 backdrop-blur-xl p-5 rounded-2xl
                   border border-slate-700/50 hover:border-purple-400/40
-                  transition shadow-lg hover:shadow-purple-500/10 flex gap-4
+                  transition-all duration-300 shadow-lg hover:shadow-purple-500/10 flex gap-4 hover:-translate-y-1 hover:scale-[1.02]
                 "
               >
                 <div className="
